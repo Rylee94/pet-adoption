@@ -1,3 +1,5 @@
+// TODO - complete to match all other files.
+
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
@@ -19,7 +21,7 @@ const profileSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  skills: [
+  location: [
     {
       type: String,
       trim: true,
