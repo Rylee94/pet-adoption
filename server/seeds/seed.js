@@ -1,8 +1,8 @@
-// TODO: Complete this with any additions.
-
 const db = require("../config/connection");
 const { Profile } = require("../models");
 const profileSeeds = require("./profileSeeds.json");
+const { PetProfile } = require("../models");
+const petProfileSeeds = require("./petProfileSeeds.json");
 const cleanDB = require("./cleanDB");
 
 db.once("open", async () => {
@@ -11,7 +11,9 @@ db.once("open", async () => {
 
     await Profile.create(profileSeeds);
 
-    console.log("all done!");
+    await PetProfile.create(petProfileSeeds);
+
+    console.log("User and Pet Profiles Created!");
     process.exit(0);
   } catch (err) {
     throw err;
