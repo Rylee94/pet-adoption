@@ -1,0 +1,22 @@
+
+[
+    {
+      "name": "Rylee",
+      "email": "rylee@email.com",
+      "password": "password01",
+      "pets": ["none"]
+    },
+    {
+      "name": "Ben",
+      "email": "ben@email.com",
+      "password": "password02",
+      "pets": ["Bailey"]
+    },
+    {
+      "name": "Halle",
+      "email": "halle@email.com",
+      "password": "password03",
+      "pets": ["none"]
+    }
+  ]
+  

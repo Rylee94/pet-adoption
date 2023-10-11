@@ -1,5 +1,3 @@
-// TODO: Create seed data for Pet Profiles
-
 [
     {
         "petName": "Bailey",
@@ -7,7 +5,7 @@
         "breed": "English Springer Spaniel",
         "age": "5",
         "gender": "male",
-        // TODO: Link to photo???
+        
         "photo": "Yes",
         "aboutPet": "He likes to play with toys, run around, sniff things. He's good with children and other pets.",
         "pottyTrained": "Yes"
@@ -18,7 +16,7 @@
         "breed": "Red Striped Biter",
         "age": "12",
         "gender": "female",
-        // TODO: Link to photo???
+        
         "photo": "Yes",
         "aboutPet": "She likes to sleep and eat and hiss at everything. Not recommended for households with kids or other pets of any kind.",
         "pottyTrained": "Yes, but she'll go wherever and whenever she likes."
