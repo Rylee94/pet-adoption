@@ -17,7 +17,7 @@ export const ADD_PROFILE = gql`
 // TODO: Verify Update for PET is correct
 export const ADD_PET = gql`
   mutation addPet($profileId: ID!, $pet: String!) {
-    addSkill(profileId: $profileId, pet: $pet) {
+    addPet(profileId: $profileId, pet: $pet) {
       _id
       name
       pets
@@ -39,7 +39,7 @@ export const LOGIN_USER = gql`
 // TODO: Verify Update for PET is correct
 export const REMOVE_PET = gql`
   mutation removePet($pet: String!) {
-    removeSkill(skill: $pet) {
+    removePet(skill: $pet) {
       _id
       name
       pets
