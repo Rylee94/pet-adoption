@@ -17,6 +17,12 @@
       "email": "halle@email.com",
       "password": "password03",
       "pets": ["none"]
+    },
+    {
+      "name": "Bobby",
+      "email": "bobby@email.com",
+      "password": "password04",
+      "pets": ["Sally"]
     }
   ]
   

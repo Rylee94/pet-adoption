@@ -4,7 +4,8 @@ const typeDefs = `#graphql
         name: String
         email: String
         password: String
-        location: String
+        pets: [String]
+        userRole: String
     }
     type PetProfile {
         _id: ID
