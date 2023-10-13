@@ -95,5 +95,16 @@
         "photo": "Yes",
         "aboutPet": "She loves to play fetch and is very curious about other dogs. She would be a great fit for a family with other pets.",
         "pottyTrained": "Not yet, currently being potty trained."
+    },
+    {
+        "petName": "Jack",
+        "petType": "Monkey",
+        "breed": "Pirate Monkey",
+        "age": "unknown",
+        "gender": "male",
+        
+        "photo": "Yes",
+        "aboutPet": "He is the companion of one Captain Jack Sparrow and aids and interferes with much of his on boat shennanigans. Not suitable for a family",
+        "pottyTrained": "Its a monkey, they do their own thing."
     }
 ]
