@@ -4,25 +4,71 @@
       "name": "Rylee",
       "email": "rylee@email.com",
       "password": "password01",
-      "pets": ["none"]
+      "pets": ["none"],
+      "userRole": "admin"
     },
     {
       "name": "Ben",
       "email": "ben@email.com",
       "password": "password02",
-      "pets": ["Bailey"]
+      "pets": ["Bailey"],
+      "userRole": "admin"
     },
     {
       "name": "Halle",
       "email": "halle@email.com",
       "password": "password03",
-      "pets": ["none"]
+      "pets": ["none"],
+      "userRole": "admin"
     },
     {
       "name": "Bobby",
       "email": "bobby@email.com",
       "password": "password04",
-      "pets": ["Sally"]
+      "pets": ["Sally"],
+      "userRole": "user"
+    },
+    {
+      "name": "Steve",
+      "email": "steve@email.com",
+      "password": "password05",
+      "pets": ["Sally"],
+      "userRole": "user"
+    },
+    {
+      "name": "Captain Jack Sparrow",
+      "email": "imapirate@email.com",
+      "password": "shivermetimbers",
+      "pets": ["Jack"],
+      "userRole": "user"
+    },
+    {
+      "name": "Han Solo",
+      "email": "igosolo@email.com",
+      "password": "maytheforcebewithyou",
+      "pets": ["none"],
+      "userRole": "user"
+    },
+    {
+      "name": "Valdemort",
+      "email": "evil@email.com",
+      "password": "hewhoshallremainnameless",
+      "pets": ["Cerberus"],
+      "userRole": "user"
+    },
+    {
+      "name": "Billy Peltzer",
+      "email": "gizmo@email.com",
+      "password": "donotfeedaftermidnight",
+      "pets": ["Barney"],
+      "userRole": "user"
+    },
+    {
+      "name": "Primrose Everdeen",
+      "email": "prim@email.com",
+      "password": "theycallmestacy",
+      "pets": ["Buttercup"],
+      "userRole": "user"
     }
   ]
   
