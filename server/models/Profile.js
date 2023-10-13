@@ -27,6 +27,10 @@ const profileSchema = new Schema({
       trim: true,
     },
   ],
+  userRole: {
+    type: String,
+    required: true,
+  }
   
 });
 
