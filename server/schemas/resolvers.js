@@ -34,18 +34,56 @@ const resolvers = {
       const profile = await Profile.findOne({ email });
 
       if (!profile) {
-        throw AuthenticationError;
+        throw new AuthenticationError("Invalid email or password");
       }
 
       const correctPw = await profile.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw AuthenticationError;
+        throw new AuthenticationError("Invalid email or password");
       }
 
       const token = signToken(profile);
       return { token, profile };
-    }
+    },
+    updateUserProfile: async (parent, { name, email, password, location }, context) => {
+        if (context.user) {
+          const profile = await Profile.findOneAndUpdate(
+            { _id: context.user._id },
+            { name, email, password, location },
+            { new: true }
+          );
+          return profile;
+        }
+        throw new AuthenticationError("You need to be logged in!");
+      },
+      
+    removeProfile: async (parent, args, context) => {
+      if (context.user) {
+        const profile = await Profile.findOneAndDelete({
+          _id: context.user._id,
+        });
+        return profile;
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
+    addPetProfile: async (parent, { petInput }) => {
+      const petProfile = await PetProfile.create(petInput);
+      return petProfile;
+    },
+    updatePetProfile: async (parent, { petId, petInput }) => {
+        const petProfile = await PetProfile.findOneAndUpdate(
+          { _id: petId },
+          petInput,
+          { new: true }
+        );
+        return petProfile; // Make sure to return the updated petProfile
+      },
+      
+    deletePetProfile: async (parent, { petId }) => {
+      const petProfile = await PetProfile.findOneAndDelete({ _id: petId });
+      return petProfile;
+    },
   },
 };
 
