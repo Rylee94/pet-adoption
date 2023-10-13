@@ -1,4 +1,4 @@
-// TODO: Anything related to the HTML pages
+// TODO: Anything related to the jsx files/HTML pages
 
 import './App.css';
 import {

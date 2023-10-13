@@ -27,6 +27,7 @@ const profileSchema = new Schema({
       trim: true,
     },
   ],
+  
 });
 
 // set up pre-save middleware to create password
