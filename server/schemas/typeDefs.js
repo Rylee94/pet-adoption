@@ -38,16 +38,14 @@ const typeDefs = `#graphql
   type Mutation {
     addProfile(name: String!, email: String!, password: String!, location: String!): Auth
     login(email: String!, password: String!): Auth
-
-    addSkill(profileId: ID!, skill: String!): Profile
+    updateUserProfile(name: String, email: String, password: String, location: String): Profile
     removeProfile: Profile
-    removeSkill(skill: String!): Profile
 
     addPetProfile(petInput: PetInput!): PetProfile
     updatePetProfile(petId: ID!, petInput: PetInput!): PetProfile
     deletePetProfile(petId: ID!): PetProfile
 
-    updateUserProfile(name: String, email: String, password: String, location: String): Profile
+
   }
 
   input PetInput {
