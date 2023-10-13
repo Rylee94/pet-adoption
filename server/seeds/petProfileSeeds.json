@@ -20,5 +20,82 @@
         "photo": "Yes",
         "aboutPet": "She likes to sleep and eat and hiss at everything. Not recommended for households with kids or other pets of any kind.",
         "pottyTrained": "Yes, but she'll go wherever and whenever she likes."
+    },
+    {
+        "petName": "Clark Kent",
+        "petType": "Dog",
+        "breed": "Frenchie",
+        "age": "9 months",
+        "gender": "male",
+        
+        "photo": "Yes",
+        "aboutPet": "He likes to take naps and cuddle with toys. He is great for families with young children and other pets",
+        "pottyTrained": "Not yet, currently being potty trained"
+    },
+    {
+        "petName": "Izzie Sparks",
+        "petType": "Dog",
+        "breed": "King Charles Spaniel",
+        "age": "11",
+        "gender": "female",
+        
+        "photo": "Yes",
+        "aboutPet": "She is very energetic and loves to play with people and other dogs.",
+        "pottyTrained": "Yes."
+    },
+    {
+        "petName": "T'Challa",
+        "petType": "Cat",
+        "breed": "Bombay",
+        "age": "5",
+        "gender": "male",
+        
+        "photo": "Yes",
+        "aboutPet": "He loves to stay active, he enjoys spending time outside and will keep himself occupied.",
+        "pottyTrained": "Yes."
+    },
+    {
+        "petName": "Socks",
+        "petType": "Cat",
+        "breed": "American Wirehair",
+        "age": "2",
+        "gender": "female",
+        
+        "photo": "Yes",
+        "aboutPet": "She is very independent and does not take well to people invading her space. Give her time and she will warm up to you and approach you.",
+        "pottyTrained": "Not fully potty trained, she will ocassionally go wherever she wants to."
+    },
+    {
+        "petName": "Dobby",
+        "petType": "Dog",
+        "breed": "Dachshund",
+        "age": "6",
+        "gender": "male",
+        
+        "photo": "Yes",
+        "aboutPet": "He is very timid and shy around men but never aggressive. He will approach once he feels comfortable around someone. Recommended for a small family.",
+        "pottyTrained": "Yes, but when he gets nervous he will go."
+    },
+    {
+        "petName": "Simba",
+        "petType": "Cat",
+        "breed": "Siamese",
+        "age": "8",
+        "gender": "male",
+        
+        "photo": "Yes",
+        "aboutPet": "He likes to cuddle with anyone laying down. Super friendly and would fit well in any kind of loving home.",
+        "pottyTrained": "Yes."
+    },
+    {
+        "petName": "Winnie",
+        "petType": "Dog",
+        "breed": "Golden Retriever",
+        "age": "1",
+        "gender": "female",
+        
+        "photo": "Yes",
+        "aboutPet": "She loves to play fetch and is very curious about other dogs. She would be a great fit for a family with other pets.",
+        "pottyTrained": "Not yet, currently being potty trained."
     }
 ]
