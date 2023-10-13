@@ -3,7 +3,7 @@ const { Profile } = require("../models");
 const profileSeeds = require("./profileSeeds.json");
 const { PetProfile } = require("../models");
 const petProfileSeeds = require("./petProfileSeeds.json");
-const cleanDB = require("./cleanDB");
+// const cleanDB = require("./cleanDB");
 
 db.once("open", async () => {
   try {

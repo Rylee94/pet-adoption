@@ -1,0 +1,20 @@
+
+[
+    {
+    "petName": "Bailey",
+    "petType": "Dog",
+    "breed": "English Springer Spaniel",
+    "age": "5",
+    "gender": "male",
+    "owner": "Ben"
+},
+{
+    "petName": "Tabby Struthers",
+    "petType": "Cat",
+    "breed": "Red Striped Biter",
+    "age": "12",
+    "gender": "female",
+    "owner": "Halle"
+}
+
+]

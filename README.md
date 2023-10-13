@@ -37,7 +37,7 @@ TBD
 ## Contributing
 
 To Contribute: Github, Email
-Contributors to our application code: Bootcamp TAs and Instructor, [kevinsmithwebdev] (https://github.com/kevinsmithwebdev)
+Contributors to our application code: Bootcamp TAs and Instructor, [kevinsmithwebdev](https://github.com/kevinsmithwebdev)
 
 ## Tests
 
