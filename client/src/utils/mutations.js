@@ -1,6 +1,6 @@
 // TODO: Add additional fields/mutations to file - confirm 'PET' todos from below
 
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const ADD_PROFILE = gql`
   mutation addProfile($name: String!, $email: String!, $password: String!) {
@@ -36,6 +36,8 @@ export const LOGIN_USER = gql`
     }
   }
 `;
+
+
 // TODO: Verify Update for PET is correct
 export const REMOVE_PET = gql`
   mutation removePet($pet: String!) {
