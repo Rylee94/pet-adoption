@@ -5,7 +5,7 @@
         "breed": "English Springer Spaniel",
         "age": "5",
         "gender": "male",
-        "photo": "Yes",
+        "photo": "English-springer-spaniel-Bailey.jpg",
         "aboutPet": "He likes to play with toys, run around, sniff things. He's good with children and other pets.",
         "pottyTrained": "Yes"
     },
@@ -48,7 +48,7 @@
         "age": "5",
         "gender": "male",
         
-        "photo": "Yes",
+        "photo": "Bombay-Cat-T'Challa.png",
         "aboutPet": "He loves to stay active, he enjoys spending time outside and will keep himself occupied.",
         "pottyTrained": "Yes."
     },

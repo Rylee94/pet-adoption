@@ -1,6 +1,8 @@
 const { Profile, PetProfile } = require("../models");
 const { signToken, AuthenticationError } = require("../utils/auth");
 
+// TODO - complete implementation of images on backend (ref 22-26-unsolved server side schema-->resolvers file)
+
 const resolvers = {
   Query: {
     profiles: async () => {
@@ -46,18 +48,22 @@ const resolvers = {
       const token = signToken(profile);
       return { token, profile };
     },
-    updateUserProfile: async (parent, { name, email, password, location }, context) => {
-        if (context.user) {
-          const profile = await Profile.findOneAndUpdate(
-            { _id: context.user._id },
-            { name, email, password, location },
-            { new: true }
-          );
-          return profile;
-        }
-        throw new AuthenticationError("You need to be logged in!");
-      },
-      
+    updateUserProfile: async (
+      parent,
+      { name, email, password, location },
+      context
+    ) => {
+      if (context.user) {
+        const profile = await Profile.findOneAndUpdate(
+          { _id: context.user._id },
+          { name, email, password, location },
+          { new: true }
+        );
+        return profile;
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
+
     removeProfile: async (parent, args, context) => {
       if (context.user) {
         const profile = await Profile.findOneAndDelete({
@@ -72,14 +78,14 @@ const resolvers = {
       return petProfile;
     },
     updatePetProfile: async (parent, { petId, petInput }) => {
-        const petProfile = await PetProfile.findOneAndUpdate(
-          { _id: petId },
-          petInput,
-          { new: true }
-        );
-        return petProfile; // Make sure to return the updated petProfile
-      },
-      
+      const petProfile = await PetProfile.findOneAndUpdate(
+        { _id: petId },
+        petInput,
+        { new: true }
+      );
+      return petProfile; // Make sure to return the updated petProfile
+    },
+
     deletePetProfile: async (parent, { petId }) => {
       const petProfile = await PetProfile.findOneAndDelete({ _id: petId });
       return petProfile;
