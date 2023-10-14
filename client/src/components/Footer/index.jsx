@@ -1,7 +1,13 @@
 export default function Footer() {
     return (
-        <div>
-            'FOOTER'
-        </div>
+        <footer>
+            <div>
+            Created by: Rylee P., Halle K. and Ben C.
+
+            </div>
+            <div>
+            Brought to you by The University of Minnesota
+            </div>
+        </footer>
     );
 }
