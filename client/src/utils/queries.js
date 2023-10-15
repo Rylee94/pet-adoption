@@ -1,6 +1,6 @@
 // TODO: Add additional queries - verify pets is what we want, add additional query params to additional files as needed.
 
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const QUERY_PROFILES = gql`
   query allProfiles {
@@ -31,3 +31,18 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+export const GET_PETS = gql`
+  query pets {
+    petProfiles {
+      _id
+      petName
+      petType
+      breed
+      age
+      gender
+      photo
+      aboutPet
+      pottyTrained
+    }
+  }`;
