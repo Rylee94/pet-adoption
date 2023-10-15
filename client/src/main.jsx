@@ -5,6 +5,7 @@ import Home from './pages/Home';
 // import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
+import Pets from './pages/Pets';
 import ErrorPage from './pages/ErrorPage';
 
 const router = createBrowserRouter([
@@ -17,10 +18,10 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />
       },
-      // {
-      //   path: '/Home',
-      //   element: <Home />
-      // }
+      {
+        path: '/Home',
+        element: <Home />
+      },
       {
         path: '/login',
         element: <Login />
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: '/signup',
         element: <Signup />
+      },
+      {
+        path: '/pets',
+        element: <Pets />
       },
       // {
       //   path: '/profiles/:profileId',
