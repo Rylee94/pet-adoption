@@ -5,7 +5,7 @@
         "breed": "English Springer Spaniel",
         "age": "5",
         "gender": "male",
-        "photo": "English-springer-spaniel-Bailey.jpg",
+        "photo": "https://i.imgur.com/Ry0L6ao.jpg",
         "aboutPet": "He likes to play with toys, run around, sniff things. He's good with children and other pets.",
         "pottyTrained": "Yes"
     },
@@ -15,7 +15,7 @@
         "breed": "Red Striped Biter",
         "age": "12",
         "gender": "female",
-        "photo": "Yes",
+        "photo": "https://i.imgur.com/mmFgchz.jpg",
         "aboutPet": "She likes to sleep and eat and hiss at everything. Not recommended for households with kids or other pets of any kind.",
         "pottyTrained": "Yes, but she'll go wherever and whenever she likes."
     },
@@ -26,7 +26,7 @@
         "age": "9 months",
         "gender": "male",
         
-        "photo": "Yes",
+        "photo": "https://i.imgur.com/YpuWz2D.jpg",
         "aboutPet": "He likes to take naps and cuddle with toys. He is great for families with young children and other pets",
         "pottyTrained": "Not yet, currently being potty trained"
     },
@@ -37,7 +37,7 @@
         "age": "11",
         "gender": "female",
         
-        "photo": "Yes",
+        "photo": "https://i.imgur.com/pxnuTeS.jpg",
         "aboutPet": "She is very energetic and loves to play with people and other dogs.",
         "pottyTrained": "Yes."
     },
@@ -48,7 +48,7 @@
         "age": "5",
         "gender": "male",
         
-        "photo": "Bombay-Cat-T'Challa.png",
+        "photo": "https://i.imgur.com/3ikCvSU.png",
         "aboutPet": "He loves to stay active, he enjoys spending time outside and will keep himself occupied.",
         "pottyTrained": "Yes."
     },
@@ -59,7 +59,7 @@
         "age": "2",
         "gender": "female",
         
-        "photo": "Yes",
+        "photo": "https://i.imgur.com/Ai4PGVu.jpg",
         "aboutPet": "She is very independent and does not take well to people invading her space. Give her time and she will warm up to you and approach you.",
         "pottyTrained": "Not fully potty trained, she will ocassionally go wherever she wants to."
     },
@@ -70,7 +70,7 @@
         "age": "6",
         "gender": "male",
         
-        "photo": "Yes",
+        "photo": "https://i.imgur.com/65TZOkV.jpg",
         "aboutPet": "He is very timid and shy around men but never aggressive. He will approach once he feels comfortable around someone. Recommended for a small family.",
         "pottyTrained": "Yes, but when he gets nervous he will go."
     },
@@ -81,7 +81,7 @@
         "age": "8",
         "gender": "male",
         
-        "photo": "Yes",
+        "photo": "https://i.imgur.com/uuEQ7ZY.jpg",
         "aboutPet": "He likes to cuddle with anyone laying down. Super friendly and would fit well in any kind of loving home.",
         "pottyTrained": "Yes."
     },
@@ -92,7 +92,7 @@
         "age": "1",
         "gender": "female",
         
-        "photo": "Yes",
+        "photo": "https://i.imgur.com/k1dsYRB.jpeg",
         "aboutPet": "She loves to play fetch and is very curious about other dogs. She would be a great fit for a family with other pets.",
         "pottyTrained": "Not yet, currently being potty trained."
     },

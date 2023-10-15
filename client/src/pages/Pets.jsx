@@ -25,6 +25,7 @@ const PetList = () => {
                         <p>Gender: {pet.gender}</p>
                         <p>About: {pet.aboutPet}</p>
                         {/* Render other pet fields as needed */}
+                        <img src={pet.photo}/>
                     </li>
                 ))}
             </ul>
