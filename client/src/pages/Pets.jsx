@@ -19,11 +19,21 @@ const PetList = () => {
                 {petProfiles.map((pet) => (
                     <li key={pet._id}>
                         <p>{pet.petName}</p>
+                        {pet.photo ? (
+                            <img
+                                src={`/images/${pet.photo}`}
+                                alt={pet.petName}
+                                style={{ maxWidth: '200px', maxHeight: '200px' }}
+                            />
+                        ) : (
+                            <p>No photo available</p>
+                        )}
                         <p>Type: {pet.petType}</p>
                         <p>Breed: {pet.breed}</p>
                         <p>Age: {pet.age}</p>
                         <p>Gender: {pet.gender}</p>
                         <p>About: {pet.aboutPet}</p>
+                        <p>Potty Trained: {pet.pottyTrained}</p>
                         {/* Render other pet fields as needed */}
                     </li>
                 ))}
