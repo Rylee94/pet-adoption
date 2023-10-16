@@ -1,52 +1,58 @@
+// Header.js
+import React from 'react';
 import { Link } from 'react-router-dom';
-
 import Auth from '../../utils/auth';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import '../../App.css'
+
+const theme = createTheme();
 
 const Header = () => {
   const logout = (event) => {
     event.preventDefault();
     Auth.logout();
   };
+
   return (
-    <header className="bg-info text-dark mb-4 py-3 display-flex align-center">
-      <div className="container flex-column justify-space-between-lg justify-center align-center text-center">
-        <Link className="text-dark" to="/">
-          <h1 className="m-0" style={{ fontSize: '3rem' }}>
-            Adopt-A-Pet!
-          </h1>
-        </Link>
-        <p className="m-0" style={{ fontSize: '1.75rem', fontWeight: '700' }}>
+    <ThemeProvider theme={theme}>
+      <Box component="header" className="header-container">
+        <Typography  className="header-title">
+          Adopt-A-Pet!
+        </Typography>
+        <Typography className="header-subtitle">
           WE NEED A CATCHY THING HERE
-        </p>
+        </Typography>
         <div>
           {Auth.loggedIn() ? (
             <>
-              <Link className="btn btn-lg btn-primary m-2" to="/me">
+              <Link to="/me" className="header-link">
                 View My Profile and Pets
               </Link>
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
+              <span className="header-logout" onClick={logout}>
                 Logout
-              </button>
+              </span>
             </>
           ) : (
             <>
-              <Link className="btn btn-lg btn-primary m-2" to="/home">
+              <Link to="/home" className="header-link">
                 Home
               </Link>
-              <Link className="btn btn-lg btn-primary m-2" to="/login">
+              <Link to="/login" className="header-link">
                 Login
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
+              <Link to="/signup" className="header-link">
                 Signup
               </Link>
-              <Link className="btn btn-lg btn-primary m-2" to="/pets">
+              <Link to="/pets" className="header-link">
                 Pets
               </Link>
             </>
           )}
         </div>
-      </div>
-    </header>
+      </Box>
+    </ThemeProvider>
   );
 };
 

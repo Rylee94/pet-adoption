@@ -1,12 +1,19 @@
-// TODO: Confirm fields below are all we need, match across app, etc...
-// TODO: Style - for 'return' section, confirm what we want to use for styling...
-
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Container from '@mui/material/Container';
+import CssBaseline from '@mui/material/CssBaseline';
+import Box from '@mui/material/Box'; // Add this import for the Box component
+
 import Auth from '../utils/auth';
+
+// Define a default theme
+const defaultTheme = createTheme();
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -44,10 +51,19 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
+    <ThemeProvider theme={defaultTheme}>
+      <Container component="main" maxWidth="xs">
+        <CssBaseline />
+        <Box
+          sx={{
+            marginTop: 8,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            textAlign: 'center'
+          }}
+        >
+          <h4 className="card-header" style= {{ fontSize: '1.5rem' }}>LOGIN</h4>
           <div className="card-body">
             {data ? (
               <p>
@@ -56,29 +72,33 @@ const Login = (props) => {
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
-                <input
+                <TextField
                   className="form-input"
-                  placeholder="Your email"
+                  placeholder="Email"
                   name="email"
                   type="email"
                   value={formState.email}
                   onChange={handleChange}
                 />
-                <input
+                <TextField
                   className="form-input"
-                  placeholder="******"
+                  placeholder="********"
                   name="password"
                   type="password"
                   value={formState.password}
                   onChange={handleChange}
+                  style={{ marginTop: '1.5rem'}}
                 />
-                <button
-                  className="btn btn-block btn-info"
-                  style={{ cursor: 'pointer' }}
-                  type="submit"
-                >
-                  Submit
-                </button>
+                <div>
+                  <Button
+                    variant="contained"
+                    size="large"
+                    style={{ cursor: 'pointer', backgroundColor: '#d4a373', color: 'white', marginTop: '2rem' }}
+                    type="submit"
+                  >
+                    Submit
+                  </Button>
+                </div>
               </form>
             )}
 
@@ -88,9 +108,9 @@ const Login = (props) => {
               </div>
             )}
           </div>
-        </div>
-      </div>
-    </main>
+        </Box>
+      </Container>
+    </ThemeProvider>
   );
 };
 
