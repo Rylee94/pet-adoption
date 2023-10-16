@@ -1,13 +1,18 @@
-export default function Footer() {
-    return (
-        <footer>
-            <div>
-            Created by: Rylee P., Halle K. and Ben C.
+// Footer.js
+import React from 'react';
+import Box from '@mui/material/Box';
 
-            </div>
-            <div>
-            Brought to you by The University of Minnesota
-            </div>
-        </footer>
-    );
-}
+const Footer = () => {
+  return (
+    <Box component="footer" className="footer-container">
+      <div>
+        Created by: Rylee P., Halle K. and Ben C.
+      </div>
+      <div>
+        Brought to you by The University of Minnesota
+      </div>
+    </Box>
+  );
+};
+
+export default Footer;
