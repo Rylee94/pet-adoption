@@ -27,10 +27,11 @@ const resolvers = {
   },
 
   Mutation: {
-    addProfile: async (parent, { name, email, password, location }) => {
-      const profile = await Profile.create({ name, email, password, location });
+    addProfile: async (parent, { name, email, password }) => {
+      const profile = await Profile.create({ name, email, password });
       const token = signToken(profile);
-      return { token, profile };
+      console.log(token);
+      return { token };
     },
     login: async (parent, { email, password }) => {
       const profile = await Profile.findOne({ email });
@@ -48,15 +49,11 @@ const resolvers = {
       const token = signToken(profile);
       return { token, profile };
     },
-    updateUserProfile: async (
-      parent,
-      { name, email, password, location },
-      context
-    ) => {
+    updateUserProfile: async (parent, { name, email, password }, context) => {
       if (context.user) {
         const profile = await Profile.findOneAndUpdate(
           { _id: context.user._id },
-          { name, email, password, location },
+          { name, email, password },
           { new: true }
         );
         return profile;

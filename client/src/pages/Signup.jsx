@@ -4,8 +4,8 @@ import { ADD_PROFILE } from '../utils/mutations';
 import Auth from '../utils/auth';
 
 const Signup = () => {
-  const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
-  const [validated] = useState(false);
+  const [userFormData, setUserFormData] = useState({ name: '', email: '', password: '' });
+  const [validated] = useState("false");
   const [showAlert, setShowAlert] = useState(false);
 
   const [addUser, { error }] = useMutation(ADD_PROFILE);
@@ -25,12 +25,13 @@ const Signup = () => {
     }
 
     try {
-      const response = await addUser(userFormData);
-
+      // console.log(addUser)
+      const response = await addUser({ userFormData });
+      
       if (!response.ok) {
         throw new Error('something went wrong!');
       }
-
+      console.log(response);
       const { token, user } = await response.json();
       console.log(user);
       Auth.login(token);
@@ -40,7 +41,7 @@ const Signup = () => {
     }
 
     setUserFormData({
-      username: '',
+      name: '',
       email: '',
       password: '',
     });
@@ -52,13 +53,13 @@ const Signup = () => {
         {showAlert && <div>Something went wrong with your signup!</div>}
 
         <div>
-          <label htmlFor='username'>Username</label>
+          <label htmlFor='name'>name</label>
           <input
             type='text'
-            placeholder='Your username'
-            name='username'
+            placeholder='Your name'
+            name='name'
             onChange={handleInputChange}
-            value={userFormData.username}
+            value={userFormData.name}
             required
           />
         </div>
@@ -87,7 +88,7 @@ const Signup = () => {
           />
         </div>
 
-        <button disabled={!(userFormData.username && userFormData.email && userFormData.password)} type='submit'>
+        <button disabled={!(userFormData.name && userFormData.email && userFormData.password)} type='submit'>
           Submit
         </button>
       </form>

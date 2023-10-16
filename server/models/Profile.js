@@ -1,7 +1,7 @@
 // TODO - complete to match all other files.
 
-const { Schema, model } = require('mongoose');
-const bcrypt = require('bcrypt');
+const { Schema, model } = require("mongoose");
+const bcrypt = require("bcrypt");
 
 const profileSchema = new Schema({
   name: {
@@ -14,7 +14,7 @@ const profileSchema = new Schema({
     type: String,
     required: true,
     unique: true,
-    match: [/.+@.+\..+/, 'Must match an email address!'],
+    match: [/.+@.+\..+/, "Must match an email address!"],
   },
   password: {
     type: String,
@@ -29,14 +29,13 @@ const profileSchema = new Schema({
   ],
   userRole: {
     type: String,
-    required: true,
-  }
-  
+    required: false,
+  },
 });
 
 // set up pre-save middleware to create password
-profileSchema.pre('save', async function (next) {
-  if (this.isNew || this.isModified('password')) {
+profileSchema.pre("save", async function (next) {
+  if (this.isNew || this.isModified("password")) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
   }
@@ -49,6 +48,6 @@ profileSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
-const Profile = model('Profile', profileSchema);
+const Profile = model("Profile", profileSchema);
 
 module.exports = Profile;

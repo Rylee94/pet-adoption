@@ -7,7 +7,7 @@ export const QUERY_PROFILES = gql`
     profiles {
       _id
       name
-      pets
+      # pets
     }
   }
 `;
@@ -45,4 +45,16 @@ export const GET_PETS = gql`
       aboutPet
       pottyTrained
     }
-  }`;
+  }
+`;
+
+export const ADD_PROFILE = gql`
+  query addProfile {
+    profiles {
+      _id
+      name
+      email
+      password
+    }
+  }
+`;
