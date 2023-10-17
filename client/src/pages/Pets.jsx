@@ -16,13 +16,18 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+
 const defaultTheme = createTheme();
+
 export default function Album() {
   const { loading, error, data } = useQuery(GET_PETS);
   const [savePet] = useMutation(SAVE_PET);
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
+
   const petProfiles = data.petProfiles;
+
   const handleSavePet = async (petId) => {
     try {
       const { data: savePetData } = await savePet({
@@ -33,6 +38,7 @@ export default function Album() {
       console.error('Error saving pet:', error);
     }
   };
+
   return (
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
@@ -44,34 +50,28 @@ export default function Album() {
                 <Card
                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
                 >
-                  {pet.photo ? (
-                    <CardMedia
-                      component="div"
-                      sx={{
-                        pt: '56.25%',
-                      }}
-                      image={`/images/${pet.photo}`}
-                      alt={pet.petName}
-                    />
-                  ) : (
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        {pet.petName}
-                      </Typography>
-                      <Typography>
-                        Type: {pet.petType}<br />
-                        Breed: {pet.breed}<br />
-                        Age: {pet.age}<br />
-                        Gender: {pet.gender}<br />
-                        About: {pet.aboutPet}<br />
-                        Potty Trained: {pet.pottyTrained}
-                      </Typography>
-                    </CardContent>
-                  )}
+                  <CardMedia
+                    component="div"
+                    sx={{
+                      pt: '56.25%',
+                    }}
+                    image={pet.photo ? `/images/${pet.photo}` : ''}
+                    alt={pet.petName}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {pet.petName}
+                    </Typography>
+                    <Typography>
+                      {pet.petType}<br />
+                      {pet.breed}<br />
+                      {pet.age} years old<br />
+                      {pet.gender}<br />
+                      About: {pet.aboutPet}<br />
+                      Potty Trained: {pet.pottyTrained}
+                    </Typography>
+                  </CardContent>
                   <CardActions>
-                    <Button size="small">View</Button>
-                    <Button size="small">Edit</Button>
-                    {/* Add the Save Pet button */}
                     <Button size="small" onClick={() => handleSavePet(pet._id)}>
                       Save Pet
                     </Button>
