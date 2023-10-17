@@ -1,45 +1,96 @@
-// src/components/PetList.jsx
-
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_PETS } from '../utils/queries';
+import { SAVE_PET } from '../utils/mutations';
+import { useMutation } from '@apollo/client';
 
-const PetList = () => {
-    const { loading, error, data } = useQuery(GET_PETS);
+import AppBar from '@mui/material/AppBar';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import CardActions from '@mui/material/CardActions';
+import CssBaseline from '@mui/material/CssBaseline';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import Button from '@mui/material/Button';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error: {error.message}</p>;
+const defaultTheme = createTheme();
 
-    const petProfiles = data.petProfiles;
+export default function Album() {
+  const { loading, error, data } = useQuery(GET_PETS);
 
-    return (
-        <div>
-            <h2>Pets for Adoption</h2>
-            <ul>
-                {petProfiles.map((pet) => (
-                    <li key={pet._id}>
-                        <p>{pet.petName}</p>
-                        {pet.photo ? (
-                            <img
-                                src={`/images/${pet.photo}`}
-                                alt={pet.petName}
-                                style={{ maxWidth: '200px', maxHeight: '200px' }}
-                            />
-                        ) : (
-                            <p>No photo available</p>
-                        )}
-                        <p>Type: {pet.petType}</p>
-                        <p>Breed: {pet.breed}</p>
-                        <p>Age: {pet.age}</p>
-                        <p>Gender: {pet.gender}</p>
-                        <p>About: {pet.aboutPet}</p>
-                        <p>Potty Trained: {pet.pottyTrained}</p>
-                        {/* Render other pet fields as needed */}
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
-};
+  const [savePet] = useMutation(SAVE_PET);
 
-export default PetList;
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
+  const petProfiles = data.petProfiles;
+
+  const handleSavePet = async (petId) => {
+    try {
+      const { data: savePetData } = await savePet({
+        variables: { petId },
+      });
+
+      console.log('Saved Pet:', savePetData.savePet);
+    } catch (error) {
+      console.error('Error saving pet:', error);
+    }
+  };
+
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <CssBaseline />
+      <main>
+        <Container sx={{ py: 8 }} maxWidth="md">
+          <Grid container spacing={4}>
+            {petProfiles.map((pet) => (
+              <Grid item key={pet._id} xs={12} sm={6} md={4}>
+                <Card
+                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                >
+                  {pet.photo ? (
+                    <CardMedia
+                      component="div"
+                      sx={{
+                        pt: '56.25%',
+                      }}
+                      image={`/images/${pet.photo}`}
+                      alt={pet.petName}
+                    />
+                  ) : (
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        {pet.petName}
+                      </Typography>
+                      <Typography>
+                        Type: {pet.petType}<br />
+                        Breed: {pet.breed}<br />
+                        Age: {pet.age}<br />
+                        Gender: {pet.gender}<br />
+                        About: {pet.aboutPet}<br />
+                        Potty Trained: {pet.pottyTrained}
+                      </Typography>
+                    </CardContent>
+                  )}
+                  <CardActions>
+                    <Button size="small">View</Button>
+                    <Button size="small">Edit</Button>
+                    {/* Add the Save Pet button */}
+                    <Button size="small" onClick={() => handleSavePet(pet._id)}>
+                      Save Pet
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </main>
+    </ThemeProvider>
+  );
+}

@@ -45,7 +45,7 @@ const typeDefs = `#graphql
     addPetProfile(petInput: PetInput!): PetProfile
     updatePetProfile(petId: ID!, petInput: PetInput!): PetProfile
     deletePetProfile(petId: ID!): PetProfile
-
+    savePetProfile(petId: ID!): PetProfile
 
   }
 
