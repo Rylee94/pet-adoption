@@ -1,8 +1,6 @@
 const { Profile, PetProfile } = require("../models");
 const { signToken, AuthenticationError } = require("../utils/auth");
 
-// TODO - complete implementation of images on backend (ref 22-26-unsolved server side schema-->resolvers file)
-
 const resolvers = {
   Query: {
     profiles: async () => {
@@ -27,8 +25,9 @@ const resolvers = {
   },
 
   Mutation: {
-    addProfile: async (parent, { name, email, password, location }) => {
-      const profile = await Profile.create({ name, email, password, location });
+    addProfile: async (parent, { name, email, password }) => {
+      const profile = await Profile.create({ name, email, password });
+      console.log('profile', profile);
       const token = signToken(profile);
       return { token, profile };
     },
@@ -48,15 +47,11 @@ const resolvers = {
       const token = signToken(profile);
       return { token, profile };
     },
-    updateUserProfile: async (
-      parent,
-      { name, email, password, location },
-      context
-    ) => {
+    updateUserProfile: async (parent, { name, email, password }, context) => {
       if (context.user) {
         const profile = await Profile.findOneAndUpdate(
           { _id: context.user._id },
-          { name, email, password, location },
+          { name, email, password },
           { new: true }
         );
         return profile;
