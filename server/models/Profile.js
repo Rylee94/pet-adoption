@@ -29,7 +29,7 @@ const profileSchema = new Schema({
   ],
   userRole: {
     type: String,
-    required: true,
+    required: false,
   }
   
 });

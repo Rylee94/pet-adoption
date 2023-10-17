@@ -1,4 +1,3 @@
-// Pets.jsx
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_PETS } from '../utils/queries';
@@ -20,27 +19,25 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const defaultTheme = createTheme();
 
-const Pets = ({ addSavedPet }) => {
+export default function Album() {
   const { loading, error, data } = useQuery(GET_PETS);
   const [savePet] = useMutation(SAVE_PET);
-
-  const handleSavePet = async (petId) => {
-    try {
-      await savePet({
-        variables: { petId },
-      });
-
-      // Call the addSavedPet function to update the state in the parent component
-      addSavedPet(petId);
-    } catch (error) {
-      console.error('Error saving pet:', error);
-    }
-  };
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
   const petProfiles = data.petProfiles;
+
+  const handleSavePet = async (petId) => {
+    try {
+      const { data: savePetData } = await savePet({
+        variables: { petId },
+      });
+      console.log('Saved Pet:', savePetData.savePet);
+    } catch (error) {
+      console.error('Error saving pet:', error);
+    }
+  };
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -87,6 +84,4 @@ const Pets = ({ addSavedPet }) => {
       </main>
     </ThemeProvider>
   );
-};
-
-export default Pets;
+}
