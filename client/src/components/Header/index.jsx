@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <ThemeProvider theme={theme}>
       <Box component="header" className="header-container">
-        <Typography  className="header-title">
+        <Typography className="header-title">
           Adopt-A-Pet!
         </Typography>
         <Typography className="header-subtitle">
@@ -27,10 +27,16 @@ const Header = () => {
         <div>
           {Auth.loggedIn() ? (
             <>
-              <Link to="/me" className="header-link">
-                View My Profile and Pets
+              <Link to="/home" className="header-link">
+                Home
               </Link>
-              <span className="header-logout" onClick={logout}>
+              <Link to="/pets" className="header-link">
+                Pets
+              </Link>
+              <Link to="/me" className="header-link">
+                Profile
+              </Link>
+              <span className="header-link" onClick={logout}>
                 Logout
               </span>
             </>
