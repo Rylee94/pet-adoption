@@ -15,7 +15,7 @@ const defaultTheme = createTheme();
 
 const Signup = () => {
   const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
-  const [validated] = useState(false);
+  const [validated] = useState("false");
   const [showAlert, setShowAlert] = useState(false);
 
   const [addUser, { error }] = useMutation(ADD_PROFILE);

@@ -90,6 +90,14 @@ const resolvers = {
       const petProfile = await PetProfile.findOneAndDelete({ _id: petId });
       return petProfile;
     },
+    savePetProfile: async (parent, { petId }) => {
+      const petProfile = await PetProfile.findOneAndUpdate(
+        { _id: petId },
+        { saved: true },
+        { new: true }
+      );
+      return petProfile;
+    }
   },
 };
 

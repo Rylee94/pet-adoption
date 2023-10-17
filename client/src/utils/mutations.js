@@ -29,19 +29,25 @@ export const LOGIN_USER = gql`
   mutation login($email: String!, $password: String!) {
     login(email: $email, password: $password) {
       token
-      profile {
-        _id
-        name
-      }
     }
   }
 `;
 
-
-// TODO: Verify Update for PET is correct
+// Corrected mutation for REMOVE_PET
 export const REMOVE_PET = gql`
   mutation removePet($pet: String!) {
-    removePet(skill: $pet) {
+    removePet(pet: $pet) {
+      _id
+      name
+      pets
+    }
+  }
+`;
+
+// save pet to profile
+export const SAVE_PET = gql`
+  mutation savePet($petId: ID!) {
+    savePet(petId: $petId) {
       _id
       name
       pets
