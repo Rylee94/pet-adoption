@@ -14,7 +14,7 @@ import Box from '@mui/material/Box'; // Add this import for the Box component
 const defaultTheme = createTheme();
 
 const Signup = () => {
-  const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
+  const [userFormData, setUserFormData] = useState({ name: '', email: '', password: '' });
   const [validated] = useState("false");
   const [showAlert, setShowAlert] = useState(false);
 
@@ -35,22 +35,17 @@ const Signup = () => {
     }
 
     try {
-      const response = await addUser(userFormData);
+      const { data } = await addUser({variables:{...userFormData}});
+      console.log(data)
 
-      if (!response.ok) {
-        throw new Error('something went wrong!');
-      }
-
-      const { token, user } = await response.json();
-      console.log(user);
-      Auth.login(token);
+      Auth.login(data.addProfile.token);
     } catch (err) {
       console.error(err);
       setShowAlert(true);
     }
 
     setUserFormData({
-      username: '',
+      name: '',
       email: '',
       password: '',
     });
@@ -69,7 +64,7 @@ const Signup = () => {
             textAlign: 'center'
           }}
         >
-          <h4 className="card-header" style={{ fontSize: '1.5rem' }}>LOGIN</h4>
+          <h4 className="card-header" style={{ fontSize: '1.5rem' }}>SIGNUP!</h4>
 
           <form noValidate validated={validated} onSubmit={handleFormSubmit}>
             {showAlert && <div>Something went wrong with your signup!</div>}
@@ -78,9 +73,9 @@ const Signup = () => {
               <TextField
                 type='text'
                 placeholder='Username'
-                name='username'
+                name='name'
                 onChange={handleInputChange}
-                value={userFormData.username}
+                value={userFormData.name}
                 required
               />
             </div>
@@ -114,7 +109,7 @@ const Signup = () => {
               size="large"
               className="btn btn-block btn-primary"
               style={{ cursor: 'pointer', backgroundColor: '#d4a373', color: 'white', marginTop: '2rem' }}
-              type="submit" disabled={!(userFormData.username && userFormData.email && userFormData.password)} type='submit'>
+              type="submit" disabled={!(userFormData.name && userFormData.email && userFormData.password)}>
               Submit
             </Button>
           </form>

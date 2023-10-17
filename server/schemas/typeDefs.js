@@ -31,15 +31,15 @@ const typeDefs = `#graphql
 
       petProfiles: [PetProfile]
       petProfile(petProfileId: ID!): PetProfile
-      searchPets(petType: String, breed: String, location: String): [PetProfile]!
+      searchPets(petType: String, breed: String): [PetProfile]!
 
 
   }
 
   type Mutation {
-    addProfile(name: String!, email: String!, password: String!, location: String!): Auth
+    addProfile(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    updateUserProfile(name: String, email: String, password: String, location: String): Profile
+    updateUserProfile(name: String, email: String, password: String): Profile
     removeProfile: Profile
 
     addPetProfile(petInput: PetInput!): PetProfile

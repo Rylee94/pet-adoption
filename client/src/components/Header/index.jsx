@@ -30,7 +30,7 @@ const Header = () => {
               <Link to="/me" className="header-link">
                 View My Profile and Pets
               </Link>
-              <span className="header-logout" onClick={logout}>
+              <span className="header-link" onClick={logout}>
                 Logout
               </span>
             </>
