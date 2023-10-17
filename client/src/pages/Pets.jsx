@@ -3,7 +3,6 @@ import { useQuery } from '@apollo/client';
 import { GET_PETS } from '../utils/queries';
 import { SAVE_PET } from '../utils/mutations';
 import { useMutation } from '@apollo/client';
-
 import AppBar from '@mui/material/AppBar';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -17,31 +16,23 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
 const defaultTheme = createTheme();
-
 export default function Album() {
   const { loading, error, data } = useQuery(GET_PETS);
-
   const [savePet] = useMutation(SAVE_PET);
-
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
-
   const petProfiles = data.petProfiles;
-
   const handleSavePet = async (petId) => {
     try {
       const { data: savePetData } = await savePet({
         variables: { petId },
       });
-
       console.log('Saved Pet:', savePetData.savePet);
     } catch (error) {
       console.error('Error saving pet:', error);
     }
   };
-
   return (
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
