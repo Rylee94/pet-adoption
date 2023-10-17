@@ -45,8 +45,7 @@ export const SAVE_PET = gql`
   mutation savePet($petId: ID!) {
     savePet(petId: $petId) {
       _id
-      name
-      pets
+      petName
     }
   }
 `;
