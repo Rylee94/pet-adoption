@@ -19,10 +19,10 @@ const Header = () => {
     <ThemeProvider theme={theme}>
       <Box component="header" className="header-container">
         <Typography className="header-title">
-          Adopt-A-Pet!
+          Pick-A-Pet!
         </Typography>
         <Typography className="header-subtitle">
-          WE NEED A CATCHY THING HERE
+          Unleash Love, Adopt a Pet
         </Typography>
         <div>
           {Auth.loggedIn() ? (

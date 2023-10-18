@@ -31,6 +31,8 @@
 header .header-title {
   font-size: 3rem;
   margin: 0;
+  color: rgb(86, 52, 4);
+  font-weight: 900;
 }
 
 header .header-subtitle {
@@ -39,6 +41,15 @@ header .header-subtitle {
   margin: 0;
   font-family: 'Indie Flower', cursive;
   color: #d4a373;
+}
+
+.title {
+  color: #6d725c;
+  font-family: 'Indie Flower', cursive;
+}
+
+.about {
+  color: rgb(93, 55, 15);
 }
 
 .header-link {
