@@ -64,7 +64,7 @@ const Login = (props) => {
             textAlign: 'center'
           }}
         >
-          <h4 className="card-header" style= {{ fontSize: '1.5rem' }}>LOGIN</h4>
+          <h4 className="card-header" style= {{ fontSize: '1.5rem' }}>LOGIN!</h4>
           <div className="card-body">
             {data ? (
               <p>
@@ -73,6 +73,7 @@ const Login = (props) => {
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
+                <div>
                 <TextField
                   className="form-input"
                   placeholder="Email"
@@ -81,6 +82,8 @@ const Login = (props) => {
                   value={formState.email}
                   onChange={handleChange}
                 />
+                </div>
+                <div>
                 <TextField
                   className="form-input"
                   placeholder="********"
@@ -90,6 +93,7 @@ const Login = (props) => {
                   onChange={handleChange}
                   style={{ marginTop: '1.5rem'}}
                 />
+                </div>
                 <div>
                   <Button
                     variant="contained"

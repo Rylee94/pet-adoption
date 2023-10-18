@@ -4,7 +4,7 @@
         "petType": "Dog",
         "breed": "English Springer Spaniel",
         "age": "5",
-        "gender": "male",
+        "gender": "Male",
         "photo": "English-springer-spaniel-Bailey.jpg",
         "aboutPet": "He likes to play with toys, run around, sniff things. He's good with children and other pets.",
         "pottyTrained": "Yes"
@@ -14,7 +14,7 @@
         "petType": "Cat",
         "breed": "Red Striped Biter",
         "age": "12",
-        "gender": "female",
+        "gender": "Female",
         "photo": "Red-Tabby-Tabby Struthers.jpg",
         "aboutPet": "She likes to sleep and eat and hiss at everything. Not recommended for households with kids or other pets of any kind.",
         "pottyTrained": "Yes, but she'll go wherever and whenever she likes."
@@ -24,7 +24,7 @@
         "petType": "Dog",
         "breed": "Frenchie",
         "age": "9 months",
-        "gender": "male",
+        "gender": "Male",
         "photo": "Frenchie-Clark Kent.jpg",
         "aboutPet": "He likes to take naps and cuddle with toys. He is great for families with young children and other pets",
         "pottyTrained": "Not yet, currently being potty trained"
@@ -34,7 +34,7 @@
         "petType": "Dog",
         "breed": "King Charles Spaniel",
         "age": "11",
-        "gender": "female",
+        "gender": "Female",
         "photo": "King-Charles-Spaniel-Izzie-Sparks.jpg",
         "aboutPet": "She is very energetic and loves to play with people and other dogs.",
         "pottyTrained": "Yes."
@@ -44,7 +44,7 @@
         "petType": "Cat",
         "breed": "Bombay",
         "age": "5",
-        "gender": "male",
+        "gender": "Male",
         "photo": "Bombay-Cat-T'Challa.png",
         "aboutPet": "He loves to stay active, he enjoys spending time outside and will keep himself occupied.",
         "pottyTrained": "Yes."
@@ -54,7 +54,7 @@
         "petType": "Cat",
         "breed": "American Wirehair",
         "age": "2",
-        "gender": "female",
+        "gender": "Female",
         "photo": "American-Wirehair-Socks.jpg",
         "aboutPet": "She is very independent and does not take well to people invading her space. Give her time and she will warm up to you and approach you.",
         "pottyTrained": "Not fully potty trained, she will ocassionally go wherever she wants to."
@@ -64,7 +64,7 @@
         "petType": "Dog",
         "breed": "Dachshund",
         "age": "6",
-        "gender": "male",
+        "gender": "Male",
         "photo": "Dachshund-Dobby.jpg",
         "aboutPet": "He is very timid and shy around men but never aggressive. He will approach once he feels comfortable around someone. Recommended for a small family.",
         "pottyTrained": "Yes, but when he gets nervous he will go."
@@ -74,7 +74,7 @@
         "petType": "Cat",
         "breed": "Siamese",
         "age": "8",
-        "gender": "male",
+        "gender": "Male",
         "photo": "Siamese-Simba.jpg",
         "aboutPet": "He likes to cuddle with anyone laying down. Super friendly and would fit well in any kind of loving home.",
         "pottyTrained": "Yes."
@@ -84,7 +84,7 @@
         "petType": "Dog",
         "breed": "Golden Retriever",
         "age": "1",
-        "gender": "female",
+        "gender": "Female",
         "photo": "",
         "aboutPet": "She loves to play fetch and is very curious about other dogs. She would be a great fit for a family with other pets.",
         "pottyTrained": "Not yet, currently being potty trained."
@@ -94,7 +94,7 @@
         "petType": "Monkey",
         "breed": "Pirate Monkey",
         "age": "unknown",
-        "gender": "male",
+        "gender": "Male",
         "photo": "",
         "aboutPet": "He is the companion of one Captain Jack Sparrow and aids and interferes with much of his on boat shennanigans. Not suitable for a family",
         "pottyTrained": "Its a monkey, they do their own thing."
