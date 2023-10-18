@@ -1,4 +1,5 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import hero from '/images/rescue-pets.jpeg'
 // import TextField from '@mui/material/TextField';
 // import Button from '@mui/material/Button';
@@ -11,25 +12,26 @@ const defaultTheme = createTheme();
 
 
 const Home = () => {
-const [audio] = useState(new Audio('/music/homepagemusic.mp3'));
-const [isPlaying, setIsPlaying] = useState(true);
+  const [audio] = useState(new Audio('/music/homepagemusic.mp3'));
+  const location = useLocation(); // Get the current location using useLocation
 
-useEffect(() => {
-  isPlaying ? audio.play() : audio.pause();
-}, [isPlaying, audio]);
-
-const handlePlay = () => {
-  setIsPlaying(true);
-  audio.play().catch((error) => console.error('Audio playback failed', error));
-};
-  
-const handlePause = () => {
-    setIsPlaying(false);
-};
-  
-  useEffect(() => {
+  const handlePlay = () => {
     audio.volume = 0.2;
-  }, [audio]);
+    audio.play().catch((error) => console.error('Audio playback failed', error));
+  };
+
+  const handlePause = () => {
+    audio.pause();
+  };
+
+  useEffect(() => {
+    if (location.pathname === '/home') { // Check if the current page is the home page
+      handlePlay();
+    }
+    return () => audio.pause(); // Pause the audio when the component unmounts
+  }, [audio, location]);
+
+
   return (
     <ThemeProvider theme={defaultTheme}>
       <div className="about-container" style={{ textAlign: 'center' }}>
