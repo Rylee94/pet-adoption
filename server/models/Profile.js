@@ -23,8 +23,8 @@ const profileSchema = new Schema({
   },
   pets: [
     {
-      type: String,
-      trim: true,
+      type: Schema.Types.ObjectId,
+      ref: 'PetProfile',
     },
   ],
   userRole: {

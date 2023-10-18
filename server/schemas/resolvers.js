@@ -95,7 +95,7 @@ const resolvers = {
     // },
 
     addPetToUser: async (parent, { petInput }, context) => {
-      console.log(petInput);
+      console.log("sting", petInput);
       if (context.user) {
         const profile = await Profile.findByIdAndUpdate(
           { _id: context.user._id },
