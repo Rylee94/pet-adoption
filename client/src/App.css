@@ -48,6 +48,10 @@ header .header-subtitle {
   font-family: 'Indie Flower', cursive;
 }
 
+.pet-name {
+  font-weight: 700;
+}
+
 .about {
   color: rgb(93, 55, 15);
 }

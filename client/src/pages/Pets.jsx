@@ -60,15 +60,15 @@ export default function Album() {
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                      {pet.petName}
+                    <strong>{pet.petName}</strong>
                     </Typography>
                     <Typography>
                       {pet.petType}<br />
                       {pet.breed}<br />
                       {pet.age} years old<br />
                       {pet.gender}<br />
-                      About: {pet.aboutPet}<br />
-                      Potty Trained: {pet.pottyTrained}
+                      <strong>About: </strong>{pet.aboutPet}<br />
+                      <strong>Potty Trained: </strong>{pet.pottyTrained}
                     </Typography>
                   </CardContent>
                   <CardActions>
