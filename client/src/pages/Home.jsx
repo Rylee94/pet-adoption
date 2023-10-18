@@ -1,5 +1,6 @@
 import React from 'react';
 
+import hero from '/images/rescue-pets.jpeg'
 // import TextField from '@mui/material/TextField';
 // import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -15,25 +16,17 @@ const Home = () => {
     <ThemeProvider theme={defaultTheme}>
       <div className="about-container" style={{ textAlign: 'center' }}>
         <div>
-          <h1 className="title" style={{ fontSize: '2rem', margin: '1rem 0' }}>
-            Home
+          <div>
+          <img src={hero} alt="Hero"/>;
+          </div>
+          <h1 className="title" style={{ fontSize: '2.3rem', margin: '1rem 0' }}>
+            Learn More
           </h1>
         </div>
         <div className="about" style={{ margin: '1rem 0' }}>
-          <p style={{ fontSize: '1.25rem' }}>
-            Who will you choose and remember for a lifetime?
+          <p style={{ fontSize: '1rem' }}>
+            Here at Pick-A-Pet, we connect lonely pets with loving families. From dogs to cats to monkeys, you can explore what kind of pet is right for you.
           </p>
-          <div>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/nSz16ngdsG0?si=U7FMArzcLfMjoFh7&amp;clip=UgkxD-nPzt4kYchlqZebVAogOFS2G-Hc0F5L&amp;clipt=EAAY6IQB"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          </div>
         </div>
       </div>
     </ThemeProvider>
