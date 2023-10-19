@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "engines": {
-    "node": "16.x"
-  },
   "scripts": {
     "start": "node server/server.js",
     "develop": "concurrently \"npm i && cd server && npm run seed && npm run watch\" \"cd client && npm run dev\"",
@@ -31,6 +28,8 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.13",
-    "mongodb": "^6.1.0"
+    "latest": "^0.2.0",
+    "mongodb": "^6.1.0",
+    "npm": "^10.2.1"
   }
 }
