@@ -8,7 +8,7 @@ import AdoptionForm from '../components/AdoptionForm.jsx';
 export default function Profile() {
     return (
         <div>
-            <h1>Profile Page</h1>
+            <h1></h1>
 
             {/* <p>Name { me }</p> */}
 

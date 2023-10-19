@@ -64,7 +64,48 @@ header .header-subtitle {
   color: rgb(168, 112, 86);
 }
 
+.form {
+  text-align: center;
+}
 
+.header-pp {
+text-align: center;
+font-family: 'Indie Flower', cursive;
+}
+
+.phone-box {
+  background-color: rgb(250, 248, 217);
+  border-radius: 25px;
+}
+
+.name-box {
+  background-color: rgb(250, 248, 217);
+  border-radius: 25px;
+}
+
+.email-box {
+  background-color: rgb(250, 248, 217);
+  border-radius: 25px;
+}
+
+.preference-box {
+  background-color: rgb(250, 248, 217);
+  border-radius: 25px;
+}
+
+.info-box {
+  background-color: rgb(250, 248, 217);
+  border-radius: 25px;
+  height: 300 px;
+}
+
+.submit {
+  background-color: rgb(229, 246, 228);
+  border-radius: 50px;
+  box-shadow: #070706;
+  border: #6d725c;
+
+}
 
 .music-button {
   background-color: #6d725c;

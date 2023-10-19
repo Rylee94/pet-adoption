@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import pets from '/images/pets.jpeg'
 
 const AdoptionForm = () => {
   const [formData, setFormData] = useState({
@@ -38,35 +39,45 @@ const AdoptionForm = () => {
   };
 
   return (
-    <div>
-      <h2>Adoption Form</h2>
+    <div class="form">
+      <h1 class="header-pp">Adoption Form</h1>
       {isSubmitted ? (
         <p>Thank you for submitting the adoption form!</p>
       ) : (
         <form onSubmit={handleSubmit}>
+          <br></br>
           <label>
             Name:
-            <input type="text" name="name" value={formData.name} onChange={handleChange} required />
+            <br></br>
+            <input class="name-box" type="text" name="name" value={formData.name} onChange={handleChange} style={{height: '40px', width: '200px'}} required />
           </label>
           <br />
+          <br></br>
           <label>
             Email:
+            <br></br>
             <input
+            class="email-box"
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
+              style={{height: '40px', width: '200px'}}
               required
             />
           </label>
           <br />
+          <br></br>
           <label>
             Phone:
+            <br></br>
             <input
+              class="phone-box"
               type="tel"
               name="phone"
               value={formData.phone}
               onChange={handleChange}
+              style={{height: '40px', width: '200px'}}
               required
             />
           </label>
@@ -78,27 +89,39 @@ const AdoptionForm = () => {
           <br />
           <label>
             Pet Preference:
+            <br></br>
             <input
+            class="preference-box"
               type="text"
               name="petPreference"
               value={formData.petPreference}
               onChange={handleChange}
+              style={{height: '40px', width: '200px'}}
               required
             />
           </label>
           <br />
+          <br></br>
           <label>
             Additional Information:
+            <br></br>
             <textarea
+            class="info-box"
               name="additionalInfo"
               value={formData.additionalInfo}
               onChange={handleChange}
+              style={{height: '100px', width: '400px'}}
             />
           </label>
           <br />
-          <button type="submit">Submit</button>
+          <br></br>
+          <br></br>
+          <button class="submit" type="submit" style={{width:'100px', height: '50px', fontSize: '1.1rem', fontWeight: 'bold'}}>Submit</button>
         </form>
       )}
+      <div>
+        <img src={pets} alt="Pets" style={{ width: '1000px', height: '500px'}}/>;
+      </div>
     </div>
   );
 };
