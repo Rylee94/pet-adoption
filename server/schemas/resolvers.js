@@ -27,7 +27,7 @@ const resolvers = {
   Mutation: {
     addProfile: async (parent, { name, email, password }) => {
       const profile = await Profile.create({ name, email, password });
-      console.log('profile', profile);
+      console.log("profile", profile);
       const token = signToken(profile);
       return { token, profile };
     },
@@ -85,14 +85,33 @@ const resolvers = {
       const petProfile = await PetProfile.findOneAndDelete({ _id: petId });
       return petProfile;
     },
-    savePetProfile: async (parent, { petId }) => {
-      const petProfile = await PetProfile.findOneAndUpdate(
-        { _id: petId },
-        { saved: true },
-        { new: true }
-      );
-      return petProfile;
-    }
+    // savePetProfile: async (parent, { petId }) => {
+    //   const petProfile = await PetProfile.findOneAndUpdate(
+    //     { _id: petId },
+    //     { saved: true },
+    //     { new: true }
+    //   );
+    //   return petProfile;
+    // },
+
+    addPetToUser: async (parent, { petInput }, context) => {
+      console.log("sting", petInput);
+      if (context.user) {
+        const profile = await Profile.findByIdAndUpdate(
+          { _id: context.user._id },
+
+          {
+            $addToSet: {
+              pets: petInput,
+            },
+          },
+          { upsert: true, populate: { path: "pets" } },
+          { new: true }
+        );
+        console.log(profile);
+        return profile;
+      }
+    },
   },
 };
 

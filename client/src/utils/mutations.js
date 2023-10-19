@@ -40,7 +40,6 @@ export const REMOVE_PET = gql`
   }
 `;
 
-// save pet to profile
 export const SAVE_PET = gql`
   mutation savePet($petId: ID!) {
     savePet(petId: $petId) {
@@ -49,3 +48,4 @@ export const SAVE_PET = gql`
     }
   }
 `;
+

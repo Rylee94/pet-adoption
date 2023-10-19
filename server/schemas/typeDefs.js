@@ -4,7 +4,7 @@ const typeDefs = `#graphql
         name: String
         email: String
         password: String
-        pets: [String]
+        pets: [PetProfile]
         userRole: String
     }
     type PetProfile {
@@ -22,6 +22,18 @@ const typeDefs = `#graphql
     type Auth {
     token: ID!
     user: Profile
+  }
+
+  input PetInput {
+    # _id: ID
+    petName: String!
+    petType: String!
+    breed: String!
+    age: String!
+    gender: String!
+    photo: String
+    aboutPet: String!
+    pottyTrained: String
   }
 
   type Query {
@@ -46,19 +58,11 @@ const typeDefs = `#graphql
     updatePetProfile(petId: ID!, petInput: PetInput!): PetProfile
     deletePetProfile(petId: ID!): PetProfile
     savePetProfile(petId: ID!): PetProfile
+    addPetToUser(petInput: ID!): Profile
 
   }
 
-  input PetInput {
-    petName: String!
-    petType: String!
-    breed: String!
-    age: String!
-    gender: String!
-    photo: String
-    aboutPet: String!
-    pottyTrained: String
-  }
+
     `;
 
 module.exports = typeDefs;

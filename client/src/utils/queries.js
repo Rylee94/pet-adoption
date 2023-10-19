@@ -12,6 +12,7 @@ export const QUERY_PROFILES = gql`
   }
 `;
 
+// try this
 export const QUERY_SINGLE_PROFILE = gql`
   query singleProfile($profileId: ID!) {
     profile(profileId: $profileId) {
