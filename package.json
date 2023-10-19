@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "start": "node server/server.js",
     "develop": "concurrently \"npm i && cd server && npm run seed && npm run watch\" \"cd client && npm run dev\"",
