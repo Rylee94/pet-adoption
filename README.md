@@ -29,7 +29,10 @@ profile
 
 ## Installation
 
-From Terminal, select commands of: 'npm i' to install packages. Then enter 'npm run seed' to populate database with seeds data. When seeding is finished, enter 'npm run develop' to start server and open page.
+From Terminal, select commands of:
+```npm i```
+
+to install packages. Then enter 'npm run seed' to populate database with seeds data. When seeding is finished, enter 'npm run develop' to start server and open page.
 
 ## Usage
 
