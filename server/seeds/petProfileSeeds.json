@@ -98,5 +98,15 @@
         "photo": "",
         "aboutPet": "He is the companion of one Captain Jack Sparrow and aids and interferes with much of his on boat shennanigans. Not suitable for a family as he is very mischievious.",
         "pottyTrained": "Its a monkey, they do their own thing."
+    },
+    {
+        "petName": "Clover",
+        "petType": "Mythical",
+        "breed": "Unicorn",
+        "age": "unknown",
+        "gender": "Female",
+        "photo": "unicorn.gif",
+        "aboutPet": "Clover is certainly one of a kind. She is wise beyond understanding and can harness the power of all the other mythical creatures. She's smart, witty and loyal. She will make anyone's life interesting and fun.",
+        "pottyTrained": "You don't ask a mythical creature how or where it does its business or you get the wrong side of the horn."
     }
 ]

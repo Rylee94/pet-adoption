@@ -10,7 +10,7 @@ import '../../App.css'
 const theme = createTheme();
 
 const Header = () => {
-  const logout = (event) => {
+    const logout = (event) => {
     event.preventDefault();
     Auth.logout();
   };
@@ -36,7 +36,7 @@ const Header = () => {
               <Link to="/me" className="header-link">
                 Profile
               </Link>
-              <span className="header-link" onClick={logout}>
+              <span className="header-link cursor-pointer" onClick={logout}>
                 Logout
               </span>
             </>
