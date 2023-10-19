@@ -4,19 +4,17 @@
 
 ## Description
 
-Our inspiration to develop an application to help a user find a pet to adopt is simple, we all love or have pets. Some of us have even been pet foster parents, making it a slightly personally motivated endeavor. 
+Our inspiration to develop an application to help a user find a pet to adopt is simple, we all love or have pets. Some of us have even been pet foster parents, making it a slightly personally motivated endeavor.
 
 ## Table of Contents
 
 - [License](#license)
-  
 - [Previews](#previews)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
-
 
 ## License
 
@@ -27,6 +25,7 @@ This project is licensed under the None License. To learn more, see the [License
 Homepage: ![Homepage](./assets/images/Homepage.png)
 
 PetsPage: ![PetsPage](./assets/images/PetsPage.png)
+profile
 
 ## Installation
 
@@ -34,7 +33,7 @@ From Terminal, select commands of: 'npm i' to install packages. Then enter 'npm 
 
 ## Usage
 
-Once the site is open and active, the user can navigate between the Homepage and Pets pages. When a user interacts with the Home page, background music will play. There are buttons on the bottom of the page to start or stop the music if the user wishes. 
+Once the site is open and active, the user can navigate between the Homepage and Pets pages. When a user interacts with the Home page, background music will play. There are buttons on the bottom of the page to start or stop the music if the user wishes.
 
 On the Pets page, the user can see pets that are available for adoption with the option to save the pet to a logged in user's profile.
 
@@ -54,8 +53,8 @@ No tests have been implemented other then error messaging.
 If you have any questions, feel free to reach out via the following platforms:
 
 - Public GitHub profiles for developers:
-    #### [Rylee](github.com/Rylee94)
-    #### [Ben](github.com/bennyleemn)
-    #### [Halle](github.com/halleklum)
-- Public GitHub for Project Repo: 
-    ### [rylee94](https://github.com/Rylee94/pet-adoption)
+  #### [Rylee](github.com/Rylee94)
+  #### [Ben](github.com/bennyleemn)
+  #### [Halle](github.com/halleklum)
+- Public GitHub for Project Repo:
+  ### [rylee94](https://github.com/Rylee94/pet-adoption)
