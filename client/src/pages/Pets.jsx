@@ -53,7 +53,7 @@ export default function Album() {
                   <CardMedia
                     component="div"
                     sx={{
-                      pt: '56.25%',
+                      pt: '90%',
                     }}
                     image={pet.photo ? `/images/${pet.photo}` : ''}
                     alt={pet.petName} className="cards"
