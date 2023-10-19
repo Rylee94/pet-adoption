@@ -10,7 +10,7 @@ An application to help a user find a pet to adopt.
 
 - [License](#license)
   
-- [Wireframe](#wireframe)
+- [Previews](#previews)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -53,8 +53,8 @@ No tests have been implemented other then error messaging.
 
 If you have any questions, feel free to reach out via the following platforms:
 
-- GitHub profiles for developers:
-    Rylee: github.com/Rylee94
-    Ben: github.com/bennyleemn
-    Halle: github.com/halleklum
-- GitHub for Project Repo: [rylee94](https://github.com/Rylee94/pet-adoption)
+- Public GitHub profiles for developers:
+    [Rylee](github.com/Rylee94)
+    [Ben](github.com/bennyleemn)
+    [Halle](github.com/halleklum)
+- Public GitHub for Project Repo: [rylee94](https://github.com/Rylee94/pet-adoption)
