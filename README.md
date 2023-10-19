@@ -4,7 +4,7 @@
 
 ## Description
 
-An application to help a user find a pet to adopt. 
+Our inspiration to develop an application to help a user find a pet to adopt is simple, we all love or have pets. Some of us have even been pet foster parents, making it a slightly personally motivated endeavor. 
 
 ## Table of Contents
 
@@ -30,7 +30,7 @@ PetsPage: ![PetsPage](./assets/images/PetsPage.png)
 
 ## Installation
 
-From Terminal, select commands of: npm i to install packages. Then enter npm run seed to populate database with seeds data. When seeding is finished, enter npm run develop to start server and open page.
+From Terminal, select commands of: 'npm i' to install packages. Then enter 'npm run seed' to populate database with seeds data. When seeding is finished, enter 'npm run develop' to start server and open page.
 
 ## Usage
 
@@ -54,7 +54,8 @@ No tests have been implemented other then error messaging.
 If you have any questions, feel free to reach out via the following platforms:
 
 - Public GitHub profiles for developers:
-    [Rylee](github.com/Rylee94)
-    [Ben](github.com/bennyleemn)
-    [Halle](github.com/halleklum)
-- Public GitHub for Project Repo: [rylee94](https://github.com/Rylee94/pet-adoption)
+    #### [Rylee](github.com/Rylee94)
+    #### [Ben](github.com/bennyleemn)
+    #### [Halle](github.com/halleklum)
+- Public GitHub for Project Repo: 
+    ### [rylee94](https://github.com/Rylee94/pet-adoption)
