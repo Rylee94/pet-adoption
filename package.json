@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node server/server.js",
-    "develop": "concurrently \"npm i && cd server && npm run seed && npm run watch\" \"cd client && npm run dev\"",
+    "develop": "concurrently \"npm i && cd server && npm run watch\" \"cd client && npm run dev\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
     "build": "cd client && vite build && npm run build"
