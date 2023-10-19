@@ -6,7 +6,7 @@
         "age": "5",
         "gender": "Male",
         "photo": "English-springer-spaniel-Bailey.jpg",
-        "aboutPet": "He likes to play with toys, run around, sniff things. He's good with children and other pets.",
+        "aboutPet": "He likes to play with toys that make noise, run around, and sniff things. He's good with children and other pets.",
         "pottyTrained": "Yes"
     },
     {
@@ -26,7 +26,7 @@
         "age": "9 months",
         "gender": "Male",
         "photo": "Frenchie-Clark Kent.jpg",
-        "aboutPet": "He likes to take naps and cuddle with toys. He is great for families with young children and other pets",
+        "aboutPet": "He likes to take naps and cuddle with toys. He is great for families with young children and other pets as he is very affectionate.",
         "pottyTrained": "Not yet, currently being potty trained"
     },
     {
@@ -36,7 +36,7 @@
         "age": "11",
         "gender": "Female",
         "photo": "King-Charles-Spaniel-Izzie-Sparks.jpg",
-        "aboutPet": "She is very energetic and loves to play with people and other dogs.",
+        "aboutPet": "She is very energetic and loves to play with people and other dogs. However, she is scared of the outdoors and prefers the comfort of being inside.",
         "pottyTrained": "Yes."
     },
     {
@@ -46,7 +46,7 @@
         "age": "5",
         "gender": "Male",
         "photo": "Bombay-Cat-T'Challa.png",
-        "aboutPet": "He loves to stay active, he enjoys spending time outside and will keep himself occupied.",
+        "aboutPet": "He loves to stay active, he enjoys spending time outside and will keep himself occupied. If you can't find him, don't worry, he will always come back.",
         "pottyTrained": "Yes."
     },
     {
@@ -86,7 +86,7 @@
         "age": "1",
         "gender": "Female",
         "photo": "",
-        "aboutPet": "She loves to play fetch and is very curious about other dogs. She would be a great fit for a family with other pets.",
+        "aboutPet": "She loves to play fetch and is very curious about other dogs. She would be a great fit for a family with other pets who love to play.",
         "pottyTrained": "Not yet, currently being potty trained."
     },
     {
@@ -96,7 +96,7 @@
         "age": "unknown",
         "gender": "Male",
         "photo": "",
-        "aboutPet": "He is the companion of one Captain Jack Sparrow and aids and interferes with much of his on boat shennanigans. Not suitable for a family",
+        "aboutPet": "He is the companion of one Captain Jack Sparrow and aids and interferes with much of his on boat shennanigans. Not suitable for a family as he is very mischievious.",
         "pottyTrained": "Its a monkey, they do their own thing."
     }
 ]

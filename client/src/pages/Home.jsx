@@ -44,14 +44,19 @@ const Home = () => {
           </h1>
         </div>
         <div className="about" style={{ margin: '1rem 0' }}>
-          <p style={{ fontSize: '1rem' }}>
+          <p style={{ fontSize: '1.25rem' }}>
             Here at Pick-A-Pet, we connect lonely pets with loving families. From dogs to cats to monkeys, you can explore what kind of pet is right for you.
           </p>
         </div>
+        <div class="contact">
+          <h3 style={{ fintSize: '1rem'}}>
+            Once you find your purrrfect pet, call <strong>555-555-5555</strong> to adopt today!
+          </h3>
+        </div>
       </div>
-      <div style={{ position: 'relative', bottom: '-100px', right: '-1000px'}}>
-        <button onClick={handlePlay}>Start the music!</button>
-        <button onClick={handlePause}>Stop the music!</button>
+      <div style={{ position: 'absolute', top: '90%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center',}}>
+        <button onClick={handlePlay} className="music-button">Start the music!</button>
+        <button onClick={handlePause} className="music-button">Stop the music!</button>
       </div>
 
     </ThemeProvider>

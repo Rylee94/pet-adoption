@@ -52,8 +52,25 @@ header .header-subtitle {
   font-weight: 700;
 }
 
+/* .cards {
+  background-color: #ccd5ae;
+} */
+
 .about {
   color: rgb(93, 55, 15);
+}
+
+.contact {
+  color: rgb(168, 112, 86);
+}
+
+
+
+.music-button {
+  background-color: #6d725c;
+  color: white;
+  border-radius: 25px;
+  padding: 10px;
 }
 
 .header-link {
@@ -77,6 +94,7 @@ header .header-subtitle {
   background-color: #e9edc9;
   color: #ccd5ae;
   padding: 1rem;
+  text-align: center;
   position: fixed;
   bottom: 0;
   width: 100%;

@@ -44,11 +44,11 @@ export default function Album() {
       <CssBaseline />
       <main>
         <Container sx={{ py: 8 }} maxWidth="md">
-          <Grid container spacing={4}>
+          <Grid container spacing={4} >
             {petProfiles.map((pet) => (
               <Grid item key={pet._id} xs={12} sm={6} md={4}>
                 <Card
-                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }} className="cards"
                 >
                   <CardMedia
                     component="div"
@@ -56,9 +56,9 @@ export default function Album() {
                       pt: '56.25%',
                     }}
                     image={pet.photo ? `/images/${pet.photo}` : ''}
-                    alt={pet.petName}
+                    alt={pet.petName} className="cards"
                   />
-                  <CardContent>
+                  <CardContent className="cards">
                     <Typography gutterBottom variant="h5" component="h2">
                     <strong>{pet.petName}</strong>
                     </Typography>
@@ -71,8 +71,8 @@ export default function Album() {
                       <strong>Potty Trained: </strong>{pet.pottyTrained}
                     </Typography>
                   </CardContent>
-                  <CardActions>
-                    <Button size="small" onClick={() => handleSavePet(pet._id)}>
+                  <CardActions className="cards">
+                    <Button size="small" onClick={() => handleSavePet(pet._id)} className="cards">
                       Save Pet
                     </Button>
                   </CardActions>
