@@ -84,6 +84,16 @@ header .header-subtitle {
   color: #A5A58D !important;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* .logout-message {
+  display: block;
+  color: magenta;
+  margin-top: 15px;
+} */
+
 /* .header-logout {
   margin: 0.5rem;
   font-size: 1.25rem;
