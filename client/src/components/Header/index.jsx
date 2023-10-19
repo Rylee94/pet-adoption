@@ -34,7 +34,7 @@ const Header = () => {
                 Pets
               </Link>
               <Link to="/me" className="header-link">
-                Profile
+                Adopt
               </Link>
               <span className="header-link cursor-pointer" onClick={logout}>
                 Logout
