@@ -24,7 +24,8 @@
   },
   "homepage": "https://github.com/Rylee94/pet-adoption#readme",
   "devDependencies": {
-    "concurrently": "^8.2.0"
+    "concurrently": "^8.2.0",
+    "vite": "^4.5.0"
   },
   "dependencies": {
     "@apollo/client": "^3.8.5",
