@@ -36,8 +36,8 @@ const Home = () => {
     <ThemeProvider theme={defaultTheme}>
       <div className="about-container" style={{ textAlign: 'center' }}>
         <div>
-          <div>
-          <img src={hero} alt="Hero"/>;
+          <div className='hero'>
+            <img src={hero} alt="Hero" />;
           </div>
           <h1 className="title" style={{ fontSize: '2.3rem', margin: '1rem 0' }}>
             Learn More
@@ -49,12 +49,12 @@ const Home = () => {
           </p>
         </div>
         <div class="contact">
-          <h3 style={{ fintSize: '1rem'}}>
+          <h3 style={{ fintSize: '1rem' }}>
             Once you find your purrrfect pet, call <strong>555-555-5555</strong> to adopt today!
           </h3>
         </div>
       </div>
-      <div style={{ position: 'absolute', top: '90%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center',}}>
+      <div style={{ position: 'absolute', top: '90%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', }}>
         <button onClick={handlePlay} className="music-button">Start the music!</button>
         <button onClick={handlePause} className="music-button">Stop the music!</button>
       </div>

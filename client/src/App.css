@@ -48,6 +48,18 @@ header .header-subtitle {
   font-family: 'Indie Flower', cursive;
 }
 
+.hero {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
 .pet-name {
   font-weight: 700;
 }
