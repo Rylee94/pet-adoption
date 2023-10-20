@@ -10,6 +10,7 @@ Our inspiration to develop an application to help a user find a pet to adopt is 
 
 - [License](#license)
 - [Previews](#previews)
+- [Site Page](#herokusite)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -22,15 +23,20 @@ This project is licensed under the None License. To learn more, see the [License
 
 ## Previews
 
-Homepage: ![Homepage](./assets/images/Homepage.png)
+### Homepage: ![Homepage](./assets/images/Homepage.png)
 
-PetsPage: ![PetsPage](./assets/images/PetsPage.png)
-profile
+### PetsPage: ![PetsPage](./assets/images/PetsPage.png)
+
+## Site Page:
+
+This page has been deployed to Heroku.
+
+#### [Adopt-A-Pet](https://afternoon-bayou-77804-936b59c53f0d.herokuapp.com/home)
 
 ## Installation
 
 From Terminal, select commands of:
-```npm i```
+`npm i`
 
 to install packages. Then enter 'npm run seed' to populate database with seeds data. When seeding is finished, enter 'npm run develop' to start server and open page.
 
@@ -45,7 +51,7 @@ The user can login if they have already signed up or the user can signup.
 ## Contributing
 
 To Contribute: Github, Email
-Contributors to our application code: Bootcamp TAs and Instructor, [kevinsmithwebdev](https://github.com/kevinsmithwebdev)
+Contributors to our application code: Bootcamp TAs and Instructor, [kevinsmithwebdev](https://github.com/kevinsmithwebdev), the interwebs - various dev help pages, prior documentation, bootcamp activities.
 
 ## Tests
 
