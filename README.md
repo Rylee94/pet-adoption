@@ -13,6 +13,7 @@ Our inspiration to develop an application to help a user find a pet to adopt is 
 - [Site Page](#herokusite)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Technologies Utilized](#technologies)
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
@@ -48,6 +49,16 @@ On the Pets page, the user can see pets that are available for adoption with the
 
 The user can login if they have already signed up or the user can signup.
 
+## Technologies Utilized:
+
+Front End: REACT
+<br>
+Back End: GRAPHQL, NODE.JS, EXPRESS.JS, APOLLO, JWT(TOKEN), MONGODB, MONGOOSE ODM
+<br>
+Styling: CSS and REACT MATERIAL UI (MUI)
+<br>
+Deployment: HEROKU
+
 ## Contributing
 
 To Contribute: Github, Email
@@ -62,8 +73,16 @@ No tests have been implemented other then error messaging.
 If you have any questions, feel free to reach out via the following platforms:
 
 - Public GitHub profiles for developers:
+<<<<<<< HEAD
   #### [Rylee](github.com/Rylee94)
   #### [Ben](github.com/bennyleemn)
   #### [Halle](github.com/halleklum)
 - Public GitHub for Project Repo:
   ### [rylee94](https://github.com/Rylee94/pet-adoption)
+=======
+    #### [Rylee](https://github.com/Rylee94)
+    #### [Ben](https://github.com/bennyleemn)
+    #### [Halle](https://github.com/halleklum)
+- Public GitHub for Project Repo: 
+    ### [rylee94](https://github.com/Rylee94/pet-adoption)
+>>>>>>> 548a499af92f9ccfa290582c55566cec34625e26
